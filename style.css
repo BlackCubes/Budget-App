@@ -85,3 +85,9 @@ body {
     color: #444;
     margin-top: 2px;
 }
+
+.budget__income--value,
+.budget__expenses--value {
+    letter-spacing: 1px;
+    float: left;
+}
