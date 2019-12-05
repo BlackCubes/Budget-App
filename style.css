@@ -198,3 +198,6 @@ h2 {
     font-weight: 400;
     margin-bottom: 15px;
 }
+
+.income__title { color: #28B9B5; }
+.expenses__title { color: #FF5049; }
