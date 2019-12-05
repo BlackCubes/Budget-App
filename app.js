@@ -6,7 +6,7 @@ var budgetController = (function() {
         this.description = description;
         this.value = value;
         this.percentage = -1;
-    }
+    };
 
     Expense.prototype.calcPercentage = function(totalIncome) {
         if (totalIncome > 0) {
@@ -14,17 +14,17 @@ var budgetController = (function() {
         } else {
             this.percentage = -1;
         }
-    }
+    };
 
     Expense.prototype.getPercentage = function() {
         return this.percentage;
-    }
+    };
 
     var Income = function(id, description, value) {
         this.id = id;
         this.description = description;
         this.value = value;
-    }
+    };
 
     var calculateTotal = function(type) {
         var sum = 0;
@@ -32,7 +32,20 @@ var budgetController = (function() {
             sum += cur.value;
         });
         data.totals[type] = sum;
-    }
+    };
+
+    var data = {
+        allItems: {
+            exp: [],
+            inc: []
+        },
+        totals: {
+            exp: 0,
+            inc: 0
+        },
+        budget: 0,
+        percentage: -1
+    };
 
 });
 
