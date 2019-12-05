@@ -20,6 +20,20 @@ var budgetController = (function() {
         return this.percentage;
     }
 
+    var Income = function(id, description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    }
+
+    var calculateTotal = function(type) {
+        var sum = 0;
+        data.allItems[type].forEach(function(cur) {
+            sum += cur.value;
+        });
+        data.totals[type] = sum;
+    }
+
 });
 
 // UI CONTROLLER
