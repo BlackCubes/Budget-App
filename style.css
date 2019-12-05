@@ -150,3 +150,17 @@ body {
 
 .add__description { width: 400px; }
 .add__value { width: 100px; }
+
+.add__btn {
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: #28B9B5;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 10px;
+}
+
+.add__btn:active { transform: translateY(2px); }
