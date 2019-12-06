@@ -248,8 +248,26 @@ var UIController = (function() {
 
             year = now.getFullYear();
             document.querySelector(DOMstrings.dateLabel).textContent = months[month] + ' ' + year;
+        },
+
+        changedType: function() {
+            
+            var fields = document.querySelectorAll(
+                DOMstrings.inputType, + ',' + DOMstrings.inputDescription + ',' + DOMstrings.inputValue
+            );
+
+            nodeListForEach(fields, function(cur) {
+                cur.classList.toggle('red-focus');
+            });
+
+            document.querySelector(DOMstrings.inputBtn).classList.toggle('red');
+
+        },
+
+        getDOMstrings: function() {
+            return DOMstrings;
         }
-    }
+    };
 
 })();
 
