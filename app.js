@@ -80,6 +80,19 @@ var budgetController = (function() {
             if (index != -1) {
                 data.allItems[type].splice(index, -1);
             }
+        },
+
+        calculateBudget: function() {
+            calculateTotal('exp');
+            calculateTotal('inc');
+
+            data.budget = data.totals.inc - data.totals.exp;
+
+            if (data.totals.inc > 0) {
+                data.percentage = Math.round((data.totals.exp / data.totals.inc) * 100);
+            } else {
+                data.percentage = -1;
+            }
         }
     };
 
