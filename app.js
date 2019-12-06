@@ -291,4 +291,16 @@ var controller = (function(budgetCtrl, UICtrl) {
 
     };
 
+    var updateBudget = function() {
+        budgetCtrl.calculateBudget();
+        var budget = budgetCtrl.getBudget();
+        UICtrl.displayBudget(budget);
+    };
+
+    var updatePercentages = function() {
+        budgetCtrl.calculatePercentages();
+        var percentages = budgetCtrl.getPercentages();
+        UICtrl.displayPercentages(percentages);
+    };
+
 })();
